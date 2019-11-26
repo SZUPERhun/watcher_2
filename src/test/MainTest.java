@@ -26,8 +26,12 @@ public class MainTest {
 		main.getMachines().add(new Machine(1, "abcd"));
 		main.getMachines().get(1).addNewMachinePart(new MachinePart(1, "abc", "abc", "abc", "2019-11-20", 20, 20, 0, 0, 0, 5, 0, 10));
 		
-		System.out.println(main.processLine("0;0;10"));
-		System.out.println(main.processLine("0;1;10"));
+		assertEquals(true, main.processLine("0;0;10"));
+		assertEquals(false, main.processLine("0;1;10"));
+		assertEquals(true, main.processLine("1;1;10"));
+		
+		main.getMachines().get(0).addNewMachinePart(new MachinePart(1, "abc", "abc", "abc", "2019-11-20", 20, 20, 0, 0, 0, 5, 0, 10));
+		assertEquals(true, main.processLine("0;1;10"));
 	}
 
 }
