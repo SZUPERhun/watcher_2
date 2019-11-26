@@ -5,6 +5,8 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import source.Machine;
+import source.MachinePart;
 import source.Main;
 
 public class MainTest {
@@ -18,8 +20,14 @@ public class MainTest {
 
 	@Test
 	public void test() {
-		//assertEquals(4, m.sum(2, 2));
-		//fail("Not yet implemented");
+		Main main = new Main();
+		main.getMachines().add(new Machine(0, "acb"));
+		main.getMachines().get(0).addNewMachinePart(new MachinePart(0, "abc", "abc", "abc", "2019-11-20", 20, 20, 0, 0, 0, 5, 0, 10));
+		main.getMachines().add(new Machine(1, "abcd"));
+		main.getMachines().get(1).addNewMachinePart(new MachinePart(1, "abc", "abc", "abc", "2019-11-20", 20, 20, 0, 0, 0, 5, 0, 10));
+		
+		System.out.println(main.processLine("0;0;10"));
+		System.out.println(main.processLine("0;1;10"));
 	}
 
 }
