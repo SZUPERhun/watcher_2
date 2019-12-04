@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Button?>
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="source.Controller">
+   <children>
+      <Label fx:id="tertemp1Label" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="76.0" layoutY="42.0" prefHeight="285.0" prefWidth="171.0" text="0,00" textAlignment="CENTER" />
+      <Label fx:id="szelltemp1Label" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="76.0" layoutY="72.0" prefHeight="285.0" prefWidth="171.0" text="0,00" textAlignment="CENTER" />
+      <Label fx:id="tertemp2Label" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="356.0" layoutY="42.0" prefHeight="285.0" prefWidth="171.0" text="0,00" textAlignment="CENTER" />
+      <Label fx:id="szelltemp2Label" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="356.0" layoutY="72.0" prefHeight="285.0" prefWidth="171.0" text="0,00" textAlignment="CENTER" />
+      <Text layoutX="55.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Machine" textAlignment="CENTER" />
+      <Text layoutX="310.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Second Machine" textAlignment="CENTER" />
+      <Button fx:id="nextDayBtn" layoutX="20.0" layoutY="200.0" mnemonicParsing="false" onAction="#handleNewDayAction" text="Next day" />
+      <Button fx:id="error1Btn" layoutX="16.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleError1Action" text="Error1" />
+      <Button fx:id="reset1Btn" layoutX="16.0" layoutY="71.0" mnemonicParsing="false" onAction="#handleReset1Action" text="Reset1" />
+      <Button fx:id="error2Btn" layoutX="276.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleError2Action" text="Error2" />
+      <Button fx:id="reset2Btn" layoutX="276.0" layoutY="71.0" mnemonicParsing="false" onAction="#handleReset2Action" text="Reset2" />
+   </children>
+</AnchorPane>
